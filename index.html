@@ -19,7 +19,7 @@
       display: grid;
       gap: 10px;
       grid-template-rows: 1fr .07fr .3fr .3fr .1fr;
-      grid-template-columns: 1fr .05fr .3fr .4fr .1fr;
+      grid-template-columns: 1fr .05fr .42fr .42fr .08fr;
     }
     .red1{
       background-color: red;
@@ -60,6 +60,24 @@
       background-color: rgb(230, 221, 232);
       grid-row: span 2;
       grid-column: span 1;
+    }
+    @media (max-width: 769px){
+      .container{
+        height: 600px;
+        width: 600px;
+      }
+    }
+    @media (max-width: 624px){
+      .container{
+        height: 400px;
+        width: 400px;
+      }
+    }
+    @media (max-width: 414px){
+      .container{
+        height: 300px;
+        width: 300px;
+      }
     }
     
   </style>
