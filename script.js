@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let siteURL = "https://ai-note-summarizer-tfmx.onrender.com/"; // Change to your site URL
     let iframe = document.getElementById("websiteFrame2");
 
-    function loadWebsite() {
+    function loadWebsite2() {
         iframe.src = siteURL + "?t=" + new Date().getTime(); // Add timestamp to avoid caching issues
         iframe.style.display = "block";
         document.getElementById("message2").innerText = "Website refreshed!";
     }
 
     // Load immediately and repeat every 10 seconds
-    loadWebsite();
+    loadWebsite2();
     setInterval(loadWebsite, 20000); // Reload every 10 seconds
 });
