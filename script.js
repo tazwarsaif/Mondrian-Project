@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Load immediately and repeat every 10 seconds
     loadWebsite();
-    setInterval(loadWebsite, 20000); // Reload every 10 seconds
+    setInterval(loadWebsite, 100000); // Reload every 10 seconds
 
     function pingAiSummarizer() {
   fetch("https://ai-note-summarizer-tfmx.onrender.com/", { mode: "no-cors" })
@@ -20,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     pingAiSummarizer();
-    setInterval(pingAiSummarizer, 20000);
+    setInterval(pingAiSummarizer, 140000);
 });
