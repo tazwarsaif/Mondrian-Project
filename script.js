@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let siteURL = "https://my-portfolio-ftoh.onrender.com/"; // Change to your site URL
-    let iframe = document.getElementById("websiteFrame");
+    
 
     function loadWebsite() {
+      let siteURL = "https://my-portfolio-ftoh.onrender.com/"; // Change to your site URL
+     let iframe = document.getElementById("websiteFrame");
         iframe.src = siteURL + "?t=" + new Date().getTime(); // Add timestamp to avoid caching issues
         iframe.style.display = "block";
         document.getElementById("message").innerText = "Website refreshed!";
