@@ -12,16 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
     loadWebsite();
     setInterval(loadWebsite, 20000); // Reload every 10 seconds
 
-    let siteURL = "https://ai-note-summarizer-tfmx.onrender.com/"; // Change to your site URL
-    let iframe = document.getElementById("websiteFrame2");
-
-    function loadWebsite2() {
-        iframe.src = siteURL + "?t=" + new Date().getTime(); // Add timestamp to avoid caching issues
-        iframe.style.display = "block";
-        document.getElementById("message2").innerText = "Website refreshed!";
+    function pingAiSummarizer() {
+  fetch("https://ai-note-summarizer-tfmx.onrender.com/", { mode: "no-cors" })
+    .then(() => console.log("Pinged AI Summarizer"))
+    .catch(() => console.warn("Ping failed"));
     }
 
-    // Load immediately and repeat every 10 seconds
-    loadWebsite2();
-    setInterval(loadWebsite, 20000); // Reload every 10 seconds
+    pingAiSummarizer();
+    setInterval(pingAiSummarizer, 20000);
 });
